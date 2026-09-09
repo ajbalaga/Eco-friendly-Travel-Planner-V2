@@ -41,7 +41,7 @@
         <div class="header-flex">
             <h2 class="panel-title">Recent Itineraries</h2>
             <?php if (!empty($recentTrips)): ?>
-                <span class="count-badge"><?php echo count($recentTrips); ?> Total</span>
+                <span class="count-badge"><?php echo count($recentTrips); ?> Trip/s</span>
             <?php endif; ?>
         </div>
 
