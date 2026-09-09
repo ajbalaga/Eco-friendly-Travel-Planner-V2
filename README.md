@@ -66,7 +66,7 @@ The final score is determined by balancing the transport mode, distance, and the
 
 ### 2. Clone the Repository
 ```bash
-git clone https://github.com/ajbalaga/Eco-friendly-travel-planner.git
+git clone https://github.com/ajbalaga/Eco-friendly-Travel-Planner-V2.git
 cd Eco-friendly-travel-planner
 ```
 
