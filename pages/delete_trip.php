@@ -4,11 +4,10 @@ session_start();
 require_once '../config/database.php';
 
 // Check if user is logged in and trip_id is provided
-if (isset($_SESSION['user_id']) && isset($_POST['trip_id'])) {
-    $stmt = $conn->prepare('DELETE FROM trips WHERE trip_id = :trip_id AND user_id = :user_id');
-    $stmt->execute([
-        'trip_id' => $_POST['trip_id'],
-        'user_id' => $_SESSION['user_id']
+if (isValidObjectId($_SESSION['user_id'] ?? null) && isValidObjectId($_POST['trip_id'] ?? null)) {
+    $db->trips->deleteOne([
+        '_id' => new MongoDB\BSON\ObjectId($_POST['trip_id']),
+        'user_id' => $_SESSION['user_id'],
     ]);
 }
 

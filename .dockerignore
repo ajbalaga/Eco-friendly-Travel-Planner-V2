@@ -1,0 +1,7 @@
+.git
+.vs
+vendor
+composer.phar
+.env
+*.md
+database/ecoFriendly_travel_planner_db.sql
