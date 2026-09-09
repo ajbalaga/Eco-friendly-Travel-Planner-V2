@@ -111,7 +111,7 @@
                     <td class="actions-cell" data-label="Actions">
                         <div class="actions-group">
                             <button type="button" class="btn-action btn-quick-edit"
-                                    aria-label="Quick Edit Trip"
+                                    title="Quick Edit" aria-label="Quick Edit Trip"
                                     data-trip-id="<?php echo htmlspecialchars($trip['trip_id'], ENT_QUOTES, 'UTF-8'); ?>"
                                     data-travel-date="<?php echo htmlspecialchars($trip['travel_date'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"
                                     data-return-date="<?php echo htmlspecialchars($trip['return_date'] ?? '', ENT_QUOTES, 'UTF-8'); ?>"
@@ -119,18 +119,15 @@
                                     data-priority="<?php echo htmlspecialchars($trip['sustainability_priority'] ?? 'carbon', ENT_QUOTES, 'UTF-8'); ?>"
                                     data-notes="<?php echo htmlspecialchars($trip['notes'] ?? '', ENT_QUOTES, 'UTF-8'); ?>">
                                 <span class="btn-icon">⚡</span>
-                                <span class="btn-text">Quick Edit</span>
                             </button>
-                            <a href="plan_trip.php?trip_id=<?php echo htmlspecialchars($trip['trip_id'], ENT_QUOTES, 'UTF-8'); ?>" class="btn-action btn-edit" aria-label="Edit Trip">
+                            <a href="plan_trip.php?trip_id=<?php echo htmlspecialchars($trip['trip_id'], ENT_QUOTES, 'UTF-8'); ?>" class="btn-action btn-edit" title="Edit" aria-label="Edit Trip">
                                 <span class="btn-icon">📝</span>
-                                <span class="btn-text">Edit</span>
                             </a>
                             <form method="POST" action="delete_trip.php" onsubmit="return confirm('Are you sure you want to cancel this trip? This cannot be undone.');" style="margin:0;">
                                 <input type="hidden" name="csrf_token" value="<?php echo htmlspecialchars($_SESSION['csrf_token'], ENT_QUOTES, 'UTF-8'); ?>">
                                 <input type="hidden" name="trip_id" value="<?php echo htmlspecialchars($trip['trip_id'], ENT_QUOTES, 'UTF-8'); ?>">
-                                <button type="submit" class="btn-action btn-delete" aria-label="Cancel Trip">
+                                <button type="submit" class="btn-action btn-delete" title="Cancel" aria-label="Cancel Trip">
                                     <span class="btn-icon">❌</span>
-                                    <span class="btn-text">Cancel</span>
                                 </button>
                             </form>
                         </div>

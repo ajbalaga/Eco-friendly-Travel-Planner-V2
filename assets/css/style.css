@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap');
+
 /* =========================================
    1. VARIABLES & ROOT
    ========================================= */
@@ -30,13 +32,24 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-size: 16px;
     color: var(--text);
-    line-height: 1.6;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
 }
 
 main {
     flex: 1;
+}
+
+h1, h2, h3, h4,
+.brand, .page-title, .panel-title, .eyebrow,
+.btn, .btn-outline, .btn-primary,
+.nav-links a {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    letter-spacing: -0.01em;
 }
 
 a {
