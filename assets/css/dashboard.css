@@ -21,10 +21,20 @@
     padding: 0 5px;
 }
 
-.panel-title { 
-    color: #2d3748; 
-    font-size: 1.5rem; 
-    margin: 0; 
+.panel-title {
+    color: #2d3748;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.count-badge {
+    background: rgba(46, 125, 50, 0.12);
+    color: #2e7d32;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 99px;
+    white-space: nowrap;
 }
 
 /* ==========================================================================
@@ -51,10 +61,11 @@
 
 .itinerary-table th {
     padding: 10px 20px;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #94a3b8;
+    letter-spacing: 0.08em;
+    color: #5f6f67;
+    font-weight: 700;
     text-align: left;
 }
 
