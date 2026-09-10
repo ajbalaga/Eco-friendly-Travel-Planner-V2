@@ -12,14 +12,19 @@ document.addEventListener('DOMContentLoaded', () => {
             menuToggle.classList.toggle('is-active');
         });
 
-        document.addEventListener('click', (e) => {
-            if (navLinks.classList.contains('active') && 
-                !menuToggle.contains(e.target) && 
+        // Safari/iOS doesn't reliably fire a bubbling 'click' event for taps on
+        // plain non-interactive elements, so 'click' alone can leave the menu
+        // stuck open on mobile. 'touchstart' fires consistently everywhere.
+        const closeIfOutside = (e) => {
+            if (navLinks.classList.contains('active') &&
+                !menuToggle.contains(e.target) &&
                 !navLinks.contains(e.target)) {
                 navLinks.classList.remove('active');
                 menuToggle.classList.remove('is-active');
             }
-        });
+        };
+        document.addEventListener('click', closeIfOutside);
+        document.addEventListener('touchstart', closeIfOutside);
     }
 });
 

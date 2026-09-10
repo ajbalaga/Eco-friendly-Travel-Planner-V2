@@ -433,6 +433,13 @@ a:hover {
         padding: 15px; /* Bigger tap target */
         z-index: 1001;
         transition: all 0.3s ease;
+        touch-action: manipulation; /* Skip the double-tap-zoom delay on mobile */
+        -webkit-tap-highlight-color: transparent; /* No gray flash on tap */
+    }
+
+    .nav-links a, .nav-profile {
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
     }
 
     /* The middle line */
