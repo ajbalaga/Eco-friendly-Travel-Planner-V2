@@ -12,6 +12,12 @@ Built as part of the **CMSC 207** curriculum, this project focuses on robust CRU
 
 ---
 
+# 🌐 Live Demo
+
+https://eco-friendly-travel-planner.onrender.com
+
+---
+
 ## ✨ Key Features
 * **Smart Eco-Scoring:** A dynamic engine that calculates sustainability scores (1–100) and carbon footprints ($CO_2e$) by factoring in transport emission rates, traveler count, and a logarithmic distance penalty.
 * **Destination Database:** Browse locations globally with specific "Eco-Notes" for responsible tourism.
